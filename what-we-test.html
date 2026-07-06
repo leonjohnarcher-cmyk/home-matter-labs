@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-cream">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What We Test — Home Matter Labs</title>
+    <meta
+      name="description"
+      content="Explore the five categories Home Matter Labs assesses: air quality, water quality, mold and allergens, surface and hygiene, and the indoor environment."
+    />
+    <meta name="theme-color" content="#1e3a5f" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="What We Test — Home Matter Labs" />
+    <meta property="og:description" content="Air, water, mold and allergens, surface hygiene, and indoor environment — measured with approved devices and laboratory methods." />
+    <meta property="og:image" content="/images/air-quality-monitor.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- ===================== SHARED HEADER / NAV ===================== -->
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="Home Matter Labs home">
+          <svg class="brand__mark icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 11.5 12 4l9 7.5" />
+            <path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9" />
+            <path d="M12 20v-5a3 3 0 0 1 3-3c0 2-1.5 3-3 3-1.5 0-3-1-3-3a3 3 0 0 1 3 3Z" />
+          </svg>
+          <span>Home Matter Labs<span class="brand__sub">Environmental Health Lab</span></span>
+        </a>
+        <nav aria-label="Primary">
+          <ul class="nav__links" id="primary-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="what-we-test.html">What We Test</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="test-packages.html">Test Packages</a></li>
+            <li><a href="for-doctors.html">For Doctors</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li class="nav__cta-mobile"><a class="btn btn--primary" href="contact.html">Book a Test</a></li>
+          </ul>
+        </nav>
+        <div class="nav__actions">
+          <a class="btn btn--primary nav__cta-desktop" href="contact.html">Book a Test</a>
+          <button class="nav__toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+            <svg class="icon icon-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+            <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">What We Test</span>
+          <h1>A complete view of your indoor environment</h1>
+          <p>
+            We assess five core categories using approved monitoring devices and laboratory methods,
+            then present the findings in a structured, doctor-friendly report.
+          </p>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- AIR -->
+        <section class="testcat" id="air">
+          <div class="testcat__media">
+            <img src="images/air-quality-monitor.png" alt="A modern white indoor air quality monitor on a wooden shelf in a softly lit home" width="620" height="500" />
+          </div>
+          <div>
+            <span class="eyebrow">Category 01</span>
+            <h2>Air Quality</h2>
+            <p>
+              Indoor air can hold particles, gases, and moisture that affect breathing, sleep, and
+              comfort. Measuring these factors helps identify sources of irritation and supports
+              decisions about ventilation, filtration, and everyday habits.
+            </p>
+            <ul class="param-list">
+              <li>PM2.5</li><li>PM10</li><li>CO2</li><li>TVOCs</li>
+              <li>Formaldehyde</li><li>CO</li><li>Temperature</li><li>Humidity</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- WATER -->
+        <section class="testcat testcat--reverse" id="water">
+          <div class="testcat__media">
+            <img src="images/water-test-vials.png" alt="Laboratory water testing vials in a rack beside a clear glass of water on a kitchen counter" width="620" height="500" />
+          </div>
+          <div>
+            <span class="eyebrow">Category 02</span>
+            <h2>Water Quality</h2>
+            <p>
+              Household water is used for drinking, cooking, and bathing every day. Testing its
+              chemical and microbiological characteristics helps identify potential concerns and
+              supports choices about filtration and treatment.
+            </p>
+            <ul class="param-list">
+              <li>pH</li><li>TDS</li><li>Hardness</li><li>Residual Chlorine</li>
+              <li>Water Microbiology</li><li>Heavy Metals</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- MOLD -->
+        <section class="testcat" id="mold">
+          <div class="testcat__media">
+            <img src="images/mold-allergens.png" alt="A technician using a moisture meter against an interior wall near a window with an HVAC vent visible" width="620" height="500" />
+          </div>
+          <div>
+            <span class="eyebrow">Category 03</span>
+            <h2>Mold &amp; Allergens</h2>
+            <p>
+              Moisture, mold, and common allergens can affect people with sensitivities, allergies,
+              or respiratory conditions. Assessing these factors helps locate hidden dampness and
+              understand potential exposure within the home.
+            </p>
+            <ul class="param-list">
+              <li>Moisture Assessment</li><li>Mold Count</li><li>Aspergillus</li>
+              <li>Dust Mites</li><li>HVAC Microbiology</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- SURFACE -->
+        <section class="testcat testcat--reverse" id="surface">
+          <div class="testcat__media">
+            <img src="images/surface-hygiene.png" alt="A hand swabbing a clean kitchen countertop with an ATP hygiene test swab beside a handheld luminometer" width="620" height="500" />
+          </div>
+          <div>
+            <span class="eyebrow">Category 04</span>
+            <h2>Surface &amp; Hygiene</h2>
+            <p>
+              Frequently touched and food-related surfaces can carry residues that are easy to
+              overlook. Hygiene testing offers an objective look at cleanliness across key areas of
+              the home.
+            </p>
+            <ul class="param-list">
+              <li>ATP Hygiene Testing</li><li>Kitchen Surfaces</li><li>Bathroom Surfaces</li>
+              <li>Refrigerator Surfaces</li><li>AC Vents</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- INDOOR -->
+        <section class="testcat" id="indoor">
+          <div class="testcat__media">
+            <img src="images/indoor-environment.png" alt="A bright, well-ventilated living room with a handheld light meter and airflow measurement device on a table" width="620" height="500" />
+          </div>
+          <div>
+            <span class="eyebrow">Category 05</span>
+            <h2>Indoor Environment</h2>
+            <p>
+              Ventilation, noise, and lighting shape day-to-day comfort and wellbeing. Measuring
+              these factors helps create spaces that feel calmer, brighter, and better ventilated.
+            </p>
+            <ul class="param-list">
+              <li>Ventilation (Airflow / ACH)</li><li>Noise Levels</li>
+              <li>Lighting (Lux)</li><li>Indoor Comfort</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-band">
+            <h2>See it all in one report</h2>
+            <p>Each category is combined into a single structured assessment you can share with your doctor.</p>
+            <a class="btn btn--primary btn--lg" href="test-packages.html">Explore Test Packages</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== SHARED FOOTER ======================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <span class="footer__brand"><svg class="brand__mark icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5" /><path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9" /></svg>Home Matter Labs</span>
+            <p>JP Nagar, Bengaluru</p>
+            <p class="footer__contact">WhatsApp: <a href="https://wa.me/919740633719" target="_blank" rel="noopener">+91 9740633719</a></p>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul class="footer__links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="what-we-test.html">What We Test</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>More</h4>
+            <ul class="footer__links">
+              <li><a href="test-packages.html">Test Packages</a></li>
+              <li><a href="for-doctors.html">For Doctors</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>&copy; <span data-year>2026</span> Home Matter Labs. Healthier Homes. Healthier Lives.</span>
+          <span>Environmental Home Health Intelligence (EHHI&trade;)</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cookie" id="cookieNotice" role="region" aria-label="Privacy notice" hidden>
+      <p>We use limited session cookies to keep this site working. Because our services touch health-adjacent information, we handle any data with care. See our privacy practices for details.</p>
+      <div class="cookie__actions"><button class="btn btn--primary" type="button" data-cookie-accept>Got it</button></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
