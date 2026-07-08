@@ -90,10 +90,17 @@
       banner.hidden = false;
     }
 
-    var acceptBtn = banner.querySelector("[data-cookie-accept]");
+        var acceptBtn = banner.querySelector("[data-cookie-accept]");
     if (acceptBtn) {
       acceptBtn.addEventListener("click", function () {
-        banner.hidden = true;
+        // 1. ADD THIS LINE: Triggers the smooth CSS fade and slide down
+        banner.classList.add("cookie-banner-fadeout");
+
+        // 2. MODIFY THIS LINE: Waits 400ms for the animation to end, then hides it from view
+        setTimeout(function () {
+          banner.hidden = true;
+        }, 400);
+
         try {
           sessionStorage.setItem("hml_cookie_ack", "1");
         } catch (err) {
@@ -101,6 +108,7 @@
         }
       });
     }
+
   }
 
   /* --------------------------- Contact form -------------------------- */

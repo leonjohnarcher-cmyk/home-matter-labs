@@ -5,20 +5,20 @@
 
 :root {
   /* Brand palette */
-  --navy: #1e3a5f;
-  --navy-700: #17304f;
-  --navy-900: #102338;
-  --green: #4a6741;
-  --green-600: #3f5938;
-  --green-700: #35492f;
-  --cream: #faf8f5;
-  --cream-200: #f2eee7;
-  --cream-300: #e7e1d6;
+  --navy: #061D3A;       /* Primary Deep Navy from client design */
+  --navy-700: #132E54;   /* Mid Navy */
+  --navy-900: #030F20;   /* Ultra Dark Navy */
+  --green: #1D64A1;      /* Replaced with Slate Blue for icons/accents */
+  --green-600: #144D7D;  /* Darker Slate Blue */
+  --green-700: #0E395E;  /* Deep Slate Blue */
+  --cream: #F0F7FF;      /* Replaced with Soft Blue Background Tint */
+  --cream-200: #E1EFFF;  /* Light Blue Variant for cards */
+  --cream-300: #D2E7FF;  /* Shaded Light Blue */
 
   /* Neutrals */
-  --ink: #24303c;          /* body text */
-  --muted: #5c6773;        /* secondary text */
-  --line: #e2ddd3;         /* dividers / borders */
+  --ink: #061D3A;        /* Deep Navy body text */
+  --muted: #4B5563;      /* Clean slate grey secondary text */
+  --line: #CBD5E1;       /* Clean border line */
   --white: #ffffff;
 
   /* Semantic tokens */
@@ -38,11 +38,12 @@
   /* Shape & spacing */
   --radius: 10px;
   --radius-lg: 16px;
-  --shadow-sm: 0 1px 2px rgba(16, 35, 56, 0.06);
-  --shadow: 0 8px 24px rgba(16, 35, 56, 0.08);
+  --shadow-sm: 0 1px 2px rgba(6, 29, 58, 0.06);
+  --shadow: 0 8px 24px rgba(6, 29, 58, 0.08);
   --maxw: 1160px;
   --header-h: 76px;
 }
+
 
 /* ----------------------------- Reset --------------------------------- */
 *,
@@ -1118,3 +1119,570 @@ ul {
 .mt-2 {
   margin-top: 2rem;
 }
+/* Integrated Trust Bar Styles */
+.trust-bar {
+  background-color: var(--navy, #061D3A);
+  color: #ffffff;
+  padding: 40px 24px;
+  border-top: 4px solid var(--accent, #0EA5E9); /* Ties into the top branding lines */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 60px; /* Separates it gracefully from home content */
+}
+
+.trust-bar-container {
+  max-width: var(--maxw, 1160px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.03); /* Subtle backdrop card look */
+  padding: 20px;
+  border-radius: var(--radius, 10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.trust-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px); /* Premium, reactive feeling on hover */
+}
+
+.trust-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(14, 165, 233, 0.15); /* Soft cyan aura */
+  border: 1px solid var(--accent, #0EA5E9);
+  border-radius: 50%;
+  color: var(--accent, #0EA5E9);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.trust-content h3 {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: #ffffff;
+  letter-spacing: -0.2px;
+}
+
+.trust-content p {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 13.5px;
+  line-height: 1.45;
+  margin: 0;
+  color: #94a3b8; /* Cleaner slate text color */
+}
+/* 5-Column Grid for Testing Areas */
+.testing-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 40px auto;
+  max-width: var(--maxw, 1160px);
+  padding: 0 16px;
+}
+
+.testing-card {
+  background: var(--bg-light-tint, #F0F7FF); /* The soft blue tint from client image */
+  border: 1px solid #D2E7FF;
+  border-radius: var(--radius-lg, 16px);
+  padding: 24px 16px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow, 0 8px 24px rgba(6, 29, 58, 0.08));
+  border-color: var(--secondary-color, #1D64A1);
+}
+
+.category-icon-circle {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border: 2px solid var(--secondary-color, #1D64A1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+  font-size: 24px;
+  color: var(--secondary-color, #1D64A1);
+}
+
+.testing-card h3 {
+  color: var(--primary-color, #061D3A);
+  font-family: var(--font-sans), sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px 0;
+}
+
+.testing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.testing-card li {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 13px;
+  color: var(--text-dark, #061D3A);
+  margin-bottom: 8px;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.4;
+}
+
+/* Custom mini bullet to look like the client's clean list */
+.testing-card li::before {
+  content: "•";
+  color: var(--secondary-color, #1D64A1);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+/* World-Class Enterprise 7-Step Layout */
+.timeline-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 48px; /* Huge, luxurious spacing between steps */
+  max-width: var(--maxw, 1160px);
+  margin: 60px auto 80px auto;
+  padding: 0 24px;
+}
+
+.timeline-step {
+  text-align: left; /* Shifted to clean, modern left alignment */
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.step-number-huge {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 56px; /* Massive, ultra-modern bold numbers */
+  font-weight: 800;
+  line-height: 1;
+  color: var(--secondary-color, #1D64A1);
+  opacity: 0.15; /* Soft, elegant background aura */
+  margin-bottom: 8px;
+  letter-spacing: -2px;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.timeline-step:hover .step-number-huge {
+  opacity: 1; /* Brightens up dynamically on hover for a high-end feel */
+  color: var(--accent, #0EA5E9);
+}
+
+.timeline-step h4 {
+  font-family: var(--font-sans), sans-serif;
+  color: var(--primary-color, #061D3A);
+  font-size: 18px; /* Larger, readable, high-impact headings */
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+.timeline-step p {
+  font-family: var(--font-sans), sans-serif;
+  color: var(--text-muted, #4B5563);
+  font-size: 14.5px; /* Comfortable, premium text sizing */
+  line-height: 1.6; /* Wide, accessible editorial line height */
+  margin: 0;
+}
+
+/* Premium baseline tracking indicator line */
+.timeline-step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #f1f5f9; /* Soft tracking bar across the layout */
+  z-index: -1;
+}
+/* Premium 3-Column Contact Page Layout */
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: var(--maxw, 1160px);
+  margin: 50px auto 80px auto;
+  padding: 0 24px;
+}
+
+.contact-column-box {
+  background: var(--surface, #ffffff);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-lg, 16px);
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(6, 29, 58, 0.02);
+}
+
+.contact-column-box h3 {
+  color: var(--primary-color, #061D3A);
+  font-family: var(--font-sans), sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  border-bottom: 2px solid var(--bg-light-tint, #F0F7FF);
+  padding-bottom: 10px;
+}
+
+/* Polishing the Formspree input fields */
+.contact-column-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-column-box label {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-color, #061D3A);
+  margin-bottom: -10px;
+}
+
+.contact-column-box input, 
+.contact-column-box select, 
+.contact-column-box textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius, 8px);
+  font-family: var(--font-sans), sans-serif;
+  font-size: 14px;
+  background: #f8fafc;
+}
+
+.contact-column-box input:focus, 
+.contact-column-box select:focus, 
+.contact-column-box textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color, #1D64A1);
+  background: #ffffff;
+}
+
+/* Full-width premium action button */
+.contact-submit-btn {
+  background-color: var(--primary-color, #061D3A);
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: var(--radius, 8px);
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 10px;
+}
+
+.contact-submit-btn:hover {
+  background-color: var(--secondary-color, #1D64A1);
+}
+
+/* Stylized Map frame */
+.map-embed-holder iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: var(--radius, 8px);
+}
+/* Inline Step Mini-Icon Settings */
+.step-mini-icon {
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+/* ==========================================================================
+   MASTER DESIGN EXTENSION — ALL LAYOUTS FULLY RECOUPED & CLEAN
+   ========================================================================== */
+
+/* 1. Bold Enterprise Header Logo Constraints */
+.brand__logo-img {
+  display: inline-block !important;
+  height: 64px !important;       /* Scaled up for premium visibility */
+  width: auto !important;        /* Prevents clipping or stretching */
+  max-width: 220px !important;
+  object-fit: contain !important;
+  margin-right: 14px !important;            
+  vertical-align: middle !important;
+  background-color: #ffffff !important;
+  padding: 6px 10px !important;
+  border-radius: var(--radius, 6px) !important;
+  box-shadow: 0 4px 12px rgba(6, 29, 58, 0.1) !important; 
+  border: 1px solid rgba(29, 100, 161, 0.2) !important;
+}
+
+/* 2. 5-Column Grid for Testing Areas */
+.testing-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 40px auto;
+  max-width: var(--maxw, 1160px);
+  padding: 0 16px;
+}
+
+.testing-card {
+  background: var(--bg-light-tint, #F0F7FF);
+  border: 1px solid #D2E7FF;
+  border-radius: var(--radius-lg, 16px);
+  padding: 24px 16px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow, 0 8px 24px rgba(6, 29, 58, 0.08));
+  border-color: var(--secondary-color, #1D64A1);
+}
+
+.category-icon-circle {
+  width: 55px;
+  height: 55px;
+  background: #ffffff;
+  border: 2px solid var(--secondary-color, #1D64A1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(6, 29, 58, 0.05);
+}
+
+.testing-card h3 {
+  color: var(--primary-color, #061D3A);
+  font-family: var(--font-sans), sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px 0;
+}
+
+.testing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.testing-card li {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 13px;
+  color: var(--text-dark, #061D3A);
+  margin-bottom: 8px;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.testing-card li::before {
+  content: "•";
+  color: var(--secondary-color, #1D64A1);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* 3. World-Class Enterprise 7-Step Layout */
+.timeline-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 48px;
+  max-width: var(--maxw, 1160px);
+  margin: 60px auto 80px auto;
+  padding: 0 24px;
+}
+
+.timeline-step {
+  text-align: left;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.step-number-huge {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--secondary-color, #1D64A1);
+  opacity: 0.15;
+  margin-bottom: 8px;
+  letter-spacing: -2px;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.timeline-step:hover .step-number-huge {
+  opacity: 1;
+  color: var(--accent, #0EA5E9);
+}
+
+.timeline-step h4 {
+  font-family: var(--font-sans), sans-serif;
+  color: var(--primary-color, #061D3A);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+.timeline-step p {
+  font-family: var(--font-sans), sans-serif;
+  color: var(--text-muted, #4B5563);
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.timeline-step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #f1f5f9;
+  z-index: -1;
+}
+
+/* 4. Integrated Trust Bar Styles */
+.trust-bar {
+  background-color: var(--navy, #061D3A);
+  color: #ffffff;
+  padding: 40px 24px;
+  border-top: 4px solid var(--accent, #0EA5E9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 60px;
+}
+
+.trust-bar-container {
+  max-width: var(--maxw, 1160px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: var(--radius, 10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.trust-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+}
+
+.trust-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(14, 165, 233, 0.15);
+  border: 1px solid var(--accent, #0EA5E9);
+  border-radius: 50%;
+  color: var(--accent, #0EA5E9);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.trust-content h3 {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: #ffffff;
+  letter-spacing: -0.2px;
+}
+
+.trust-content p {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 13.5px;
+  line-height: 1.45;
+  margin: 0;
+  color: #94a3b8;
+}
+
+/* Perfect Seamless Cookie Notification Display */
+#cookieNotice {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  z-index: 9999;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 1;
+}
+
+/* This targets it ONLY when JavaScript tells it to slide away */
+#cookieNotice.cookie-banner-fadeout {
+  opacity: 0 !important;
+  transform: translateX(-50%) translateY(40px) !important;
+  pointer-events: none !important;
+}
+/* Bold Enterprise Header Logo Sizing */
+.brand__logo-img {
+  display: inline-block !important;
+  height: 64px !important;       /* Scaled up for high-impact visibility */
+  width: auto !important;        /* Keeps the visual proportions natural */
+  max-width: 220px !important;
+  object-fit: contain !important;
+  margin-right: 14px !important;            
+  vertical-align: middle !important;
+  background-color: #ffffff !important;
+  padding: 6px 10px !important;
+  border-radius: var(--radius, 6px) !important;
+  box-shadow: 0 4px 12px rgba(6, 29, 58, 0.1) !important; 
+  border: 1px solid rgba(29, 100, 161, 0.2) !important;
+}
+/* Smooth Fade-Out for Cookie Acceptance Click */
+#cookieNotice button[data-cookie-accept]:active {
+  transform: scale(0.95); /* Micro-interaction feedback when clicked */
+}
+
+/* Animates the parent banner container when dismissed */
+#cookieNotice.cookie-banner-fadeout {
+  opacity: 0 !important;
+  transform: translate(-50%, 30px) !important; /* Smoothly sinks downward */
+  transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  pointer-events: none !important;
+}
+
+
+
+
+
