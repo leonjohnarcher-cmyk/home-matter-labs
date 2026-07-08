@@ -36,11 +36,7 @@
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="index.html" aria-label="Home Matter Labs home">
-          <svg class="brand__mark icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M3 11.5 12 4l9 7.5" />
-            <path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9" />
-            <path d="M12 20v-5a3 3 0 0 1 3-3c0 2-1.5 3-3 3-1.5 0-3-1-3-3a3 3 0 0 1 3 3Z" />
-          </svg>
+          <img src="./images/logo.jpeg" alt="Home Matter Labs Logo" class="brand__logo-img" />
           <span>
             Home Matter Labs
             <span class="brand__sub">Environmental Health Lab</span>
@@ -156,87 +152,73 @@
             </p>
           </div>
 
-          <div class="grid grid--cards">
-            <article class="card">
-              <span class="card__icon icon-badge" aria-hidden="true">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h9a2.5 2.5 0 1 1-2.5 2.5"/></svg>
-              </span>
+                    <!-- Updated Client-Style 5-Column Horizontal Grid -->
+                    <!-- Bulletproof 5-Column Horizontal Grid with Thematic Icons -->
+          <div class="testing-areas-grid">
+            
+            <article class="testing-card">
+              <div class="category-icon-circle">💨</div>
               <h3>Air Quality</h3>
-              <ul class="card__list">
-                <li>PM2.5, PM10, CO2</li>
-                <li>TVOCs, Formaldehyde, CO</li>
-                <li>Temperature &amp; Humidity</li>
+              <ul>
+                <li>PM2.5 & PM10</li>
+                <li>Carbon Dioxide (CO₂)</li>
+                <li>Total VOCs</li>
+                <li>Formaldehyde</li>
+                <li>Carbon Monoxide (CO)</li>
               </ul>
-              <a class="card__link" href="what-we-test.html#air">
-                Learn more
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </a>
             </article>
 
-            <article class="card">
-              <span class="card__icon icon-badge" aria-hidden="true">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg>
-              </span>
+            <article class="testing-card">
+              <div class="category-icon-circle">💧</div>
               <h3>Water Quality</h3>
-              <ul class="card__list">
-                <li>pH, TDS, Hardness</li>
+              <ul>
+                <li>pH & TDS</li>
+                <li>Hardness</li>
                 <li>Residual Chlorine</li>
-                <li>Water Microbiology, Heavy Metals</li>
+                <li>Microbiological Analysis</li>
+                <li>Heavy Metals</li>
               </ul>
-              <a class="card__link" href="what-we-test.html#water">
-                Learn more
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </a>
             </article>
 
-            <article class="card">
-              <span class="card__icon icon-badge" aria-hidden="true">
-                <svg class="icon" viewBox="0 0 24 24"><circle cx="7" cy="15" r="3"/><circle cx="15" cy="16" r="2"/><circle cx="13" cy="9" r="2.5"/><path d="M4 20h16"/></svg>
-              </span>
-              <h3>Mold &amp; Allergens</h3>
-              <ul class="card__list">
-                <li>Moisture Assessment, Mold Count</li>
-                <li>Aspergillus, Dust Mites</li>
-                <li>HVAC Microbiology</li>
+            <article class="testing-card">
+              <div class="category-icon-circle">🍄</div>
+              <h3>Mold & Allergens</h3>
+              <ul>
+                <li>Mold Count (Air/Surface)</li>
+                <li>Aspergillus Species</li>
+                <li>Dust Mites</li>
+                <li>Pet Dander</li>
+                <li>Pollen Screening</li>
               </ul>
-              <a class="card__link" href="what-we-test.html#mold">
-                Learn more
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </a>
             </article>
 
-            <article class="card">
-              <span class="card__icon icon-badge" aria-hidden="true">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M6 20V9l6-4 6 4v11"/><path d="M10 20v-5h4v5"/></svg>
-              </span>
-              <h3>Surface &amp; Hygiene</h3>
-              <ul class="card__list">
+            <article class="testing-card">
+              <div class="category-icon-circle">🧫</div>
+              <h3>Surface & Hygiene</h3>
+              <ul>
                 <li>ATP Hygiene Testing</li>
-                <li>Kitchen / Bathroom / Refrigerator</li>
-                <li>AC Vents</li>
+                <li>Kitchen Surfaces</li>
+                <li>Bathroom Surfaces</li>
+                <li>Refrigerator Surfaces</li>
+                <li>Air Conditioner Vents</li>
               </ul>
-              <a class="card__link" href="what-we-test.html#surface">
-                Learn more
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </a>
             </article>
 
-            <article class="card">
-              <span class="card__icon icon-badge" aria-hidden="true">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M3 7h18"/><path d="M3 12h13"/><path d="M3 17h9"/><circle cx="19" cy="15" r="2.5"/></svg>
-              </span>
+            <article class="testing-card">
+              <div class="category-icon-circle">🏠</div>
               <h3>Indoor Environment</h3>
-              <ul class="card__list">
-                <li>Ventilation (Airflow / ACH)</li>
-                <li>Noise Levels, Lighting (Lux)</li>
-                <li>Indoor Comfort</li>
+              <ul>
+                <li>Ventilation (Airflow/ACH)</li>
+                <li>Noise Levels</li>
+                <li>Lighting (Lux)</li>
+                <li>Moisture & Dampness</li>
+                <li>Odor Evaluation</li>
               </ul>
-              <a class="card__link" href="what-we-test.html#indoor">
-                Learn more
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </a>
             </article>
+
           </div>
+
+
         </div>
       </section>
 
@@ -320,6 +302,8 @@
     </main>
 
     <!-- ===================== SHARED FOOTER ======================== -->
+        <!-- ===================== CLIENT TRUST BAR ===================== -->
+    
     <footer class="site-footer">
       <div class="container">
         <div class="footer__grid">
