@@ -86,8 +86,9 @@
           <!-- Contact form -->
           <div>
            <!-- API CALL PLACEHOLDER — this form is now wired to Formspree. -->
-<form class="form" action="https://formspree.io/f/meebnwpg" method="POST">
-    <input type="hidden" name="_next" value="https://leonjohnarcher-cmyk.github.io/home-matter-labs/thank-you.html"/>
+<form id="my-form" class="form" action="https://formspree.io/f/meebnwpg" method="POST">
+
+
   
   <div class="field">
     <label for="name">Name</label>
@@ -126,7 +127,10 @@
         <div class="footer__grid">
           <div>
             <span class="footer__brand"><svg class="brand__mark icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5" /><path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9" /></svg>Home Matter Labs</span>
-            <p>JP Nagar, Bengaluru</p>
+          <p class="footer__contact"><strong>Global Headquarters:</strong> JP Nagar, Bengaluru</p>
+          <p class="footer__contact"><strong>New York Office:</strong> WeWork — 1900 Broadway, NY, USA</p>
+          <p class="footer__contact"><strong>Toronto Office:</strong> WeWork — 100 University Ave, ON, Canada</p>
+
             <p class="footer__contact">WhatsApp: <a href="https://wa.me/919740633719" target="_blank" rel="noopener">+91 9740633719</a></p>
           </div>
           <div>
@@ -159,6 +163,53 @@
       <div class="cookie__actions"><button class="btn btn--primary" type="button" data-cookie-accept>Got it</button></div>
     </div>
 
-    <script src="script.js"></script>
+    
+    <script>
+  const form = document.getElementById("my-form");
+  
+  form.addEventListener("submit", async function(event) {
+    event.preventDefault(); // Stops the Formspree page from loading
+    
+    const data = new FormData(form);
+    
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        // Redirects instantly to your local thank-you page layout
+        window.location.href = "http://localhost:3000/thank-you.html";
+      } else {
+        alert("Oops! There was a problem submitting your form.");
+      }
+    } catch (error) {
+      alert("Oops! There was a connectivity problem submitting your form.");
+    }
+  });
+</script>
+ <!-- Smooth Scroll Core Library -->
+<script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+
+<!-- Physics Setup Script -->
+<script>
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>
+
   </body>
 </html>

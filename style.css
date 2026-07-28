@@ -1681,6 +1681,93 @@ ul {
               transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
   pointer-events: none !important;
 }
+/* --- HOME MATTER MULTI-PAGE EXPANSION ENGINE UTILITIES --- */
+.section-padding { padding: 60px 0; }
+.spacing-top { margin-top: 40px; }
+.text-center { text-align: center; }
+
+/* Multi-Column Display Grids */
+.grid-3-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.grid-2-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 40px; }
+
+/* Pricing Component Theme System */
+.package-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+.card-header { padding: 25px; text-align: center; color: #ffffff; }
+.basic-theme { background-color: #2f855a; }       /* Brand Green */
+.advanced-theme { background-color: #2b6cb0; }    /* Brand Blue */
+.comprehensive-theme { background-color: #553c9a; } /* Brand Purple */
+.card-header .price { font-size: 2.25rem; font-weight: bold; margin-top: 10px; }
+.card-body { padding: 30px 25px; flex-grow: 1; }
+
+/* B2B2C Specialist Switcher Nav Elements */
+.specialty-subnav { margin-top: 25px; padding: 15px; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+.spec-btn { display: inline-block; padding: 10px 20px; margin: 5px; background-color: #1e3a5f; color: #ffffff; border-radius: 4px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.spec-btn:hover { background-color: #10b981; }
+
+/* 8-Step Verification Grid Cards Layout */
+.flow-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 30px; }
+.flow-card { background: #f8fafc; border-top: 4px solid #1e3a5f; padding: 20px; border-radius: 4px; }
+.flow-card h4 { font-size: 1.5rem; color: #10b981; margin: 0 0 10px 0; }
+.flow-card h5 { font-size: 1.1rem; margin: 0 0 8px 0; color: #0f172a; }
+
+/* Specialized Medical Layout Accents */
+.badge { display: inline-block; background: #1e3a5f; color: #ffffff; padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
+.badge--pink { background: #be185d; }
+.title-highlight { color: #be185d; }
+.highlight-green-box { background: rgba(16, 185, 129, 0.08); border: 2px dashed #10b981; padding: 25px; border-radius: 8px; }
+.vulnerability-banner { background: #0f172a; color: #ffffff; padding: 20px; border-radius: 6px; }
+.lung-card { background: #ffffff; padding: 25px; border-radius: 6px; border-left: 4px solid #2b6cb0; }
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Snappy, premium hover feedback */
+}
+.testing-card {
+  background-color: #ffffff;   /* Clean white background to make the cards appear */
+  border: 1px solid #e2e8f0;   /* Light gray structural border edge */
+  border-radius: 12px;         /* Rounded premium corners */
+  padding: 24px;               /* Clean internal text breathing room */
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testing-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--header-h, #0052cc);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+.testing-card .top-5-tests-list,
+.testing-card p,
+.testing-card span {
+  color: #1e293b !important; /* Forces a highly professional, readable deep charcoal color */
+}
+
+
+
+
 
 
 

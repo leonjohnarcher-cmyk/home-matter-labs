@@ -53,137 +53,89 @@
     </header>
 
     <main id="main">
-      <section class="page-hero">
-        <div class="container">
-          <span class="eyebrow">For Doctors</span>
-          <h1>For Healthcare Professionals</h1>
-          <p>
-            Home Matter Lab Test provides additional information about a patient's home environment
-            that may be relevant to overall health. It supports clinical discussions by presenting
-            standardized environmental assessment findings alongside laboratory and device-based
-            measurements.
+      <!-- 1. CLINICAL OVERVIEW HERO -->
+      <section class="page-hero" style="background-color: #f8fafc; padding: 60px 0; border-bottom: 1px solid #e2e8f0;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+          <span class="badge" style="background-color: #1e3a5f; color: #ffffff; padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">One-Page Clinical Overview</span>
+          <h1 style="color: #1e3a5f; margin-top: 15px; font-size: 2.5rem; font-family: 'Bitter', serif;">Evidence-based home environment insights for better patient outcomes.</h1>
+          <p style="font-size: 1.1rem; color: #475569; line-height: 1.6; max-width: 800px; margin-top: 15px;">
+            Home Matter Lab Test is a comprehensive environmental home health assessment that evaluates key indoor factors. The resulting data helps physicians complement clinical evaluations beyond the clinic walls.
           </p>
-        </div>
-      </section>
-
-      <!-- Intro image + context -->
-      <section class="section">
-        <div class="container testcat">
-          <div class="testcat__media">
-            <img src="images/for-doctors.png" alt="A physician reviewing a printed environmental health report at a desk with a patient" width="620" height="500" />
-          </div>
-          <div>
-            <span class="eyebrow">Context for clinicians</span>
-            <h2>Environmental context for the conversations you already have</h2>
-            <p>
-              Many health conversations touch on where and how a patient lives. The Home Matter Lab
-              Test organizes environmental measurements into a consistent format, so you can consider
-              home factors alongside your clinical assessment.
-            </p>
-            <p>
-              Findings are presented descriptively and are intended to support — not replace — your
-              professional judgment and the care you provide.
-            </p>
+          
+          <!-- QUICK LINK ROUTING FOR SPECIALIZED FLYERS -->
+          <div class="specialty-routing-strip" style="margin-top: 30px; background: #ffffff; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+            <strong style="color: #0f172a; font-size: 0.9rem;">Targeted Portals:</strong>
+            <a href="for-ent-doctors.html" class="btn btn--outline" style="padding: 8px 16px; font-size: 0.85rem; border: 1px solid #cbd5e1; border-radius: 4px; text-decoration: none; color: #1e3a5f; font-weight: 500;">👂 Ear, Nose & Throat (ENT) Portal</a>
+            <a href="pulmonology.html" class="btn btn--outline" style="padding: 8px 16px; font-size: 0.85rem; border: 1px solid #cbd5e1; border-radius: 4px; text-decoration: none; color: #1e3a5f; font-weight: 500;">🫁 Pulmonology & Lung Portal</a>
+            <a href="for-pediatricians.html" class="btn btn--outline" style="padding: 8px 16px; font-size: 0.85rem; border: 1px solid #cbd5e1; border-radius: 4px; text-decoration: none; color: #1e3a5f; font-weight: 500;">👶 Pediatrics & Child Health Portal</a>
           </div>
         </div>
       </section>
 
-      <!-- How to prescribe / refer -->
-      <section class="section section--alt" aria-labelledby="refer-heading">
-        <div class="container">
-          <div class="section-head center">
-            <span class="eyebrow">Referrals</span>
-            <h2 id="refer-heading">How to prescribe or refer a patient</h2>
+      <!-- 2. THE 8-STEP ENGAGEMENT FLOW -->
+      <section class="section" style="padding: 60px 0;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+          <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+            <h2 style="color: #1e3a5f; font-family: 'Bitter', serif; font-size: 2rem;">Doctor Engagement Flow</h2>
+            <p style="color: #64748b; margin-top: 5px;">Doctors treat the patient and Home Matter Labs assesses the home environment.</p>
           </div>
-          <div class="steps steps--3">
-            <div class="step">
-              <span class="step__num" aria-hidden="true">1</span>
-              <h3>Identify the need</h3>
-              <p>Consider the Home Matter Lab Test when a patient's home environment may be relevant to their symptoms or care.</p>
+          
+          <!-- 8-STEP CARD MATRIX GRID -->
+          <div class="flow-matrix-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+            <div class="flow-step-card" style="background: #ffffff; border-top: 4px solid #1e3a5f; padding: 20px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; border-left: 1px solid #e2e8f0;">
+                <span style="font-size: 1.5rem; font-family: 'Bitter', serif; font-weight: 700; color: #1e3a5f;">01</span>
+                <h4 style="margin: 10px 0 5px 0; color: #0f172a; font-size: 1.1rem;">Doctor Consultation</h4>
+                <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">Evaluates patient via symptoms, history, and examination. If relevant, prescribes the test.</p>
             </div>
-            <div class="step">
-              <span class="step__num" aria-hidden="true">2</span>
-              <h3>Prescribe the test</h3>
-              <p>Recommend the assessment to your patient and select the package that best matches their situation.</p>
+            <div class="flow-step-card" style="background: #ffffff; border-top: 4px solid #1e3a5f; padding: 20px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; border-left: 1px solid #e2e8f0;">
+                <span style="font-size: 1.5rem; font-family: 'Bitter', serif; font-weight: 700; color: #1e3a5f;">02</span>
+                <h4 style="margin: 10px 0 5px 0; color: #0f172a; font-size: 1.1rem;">Patient Registration</h4>
+                <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">Patient contacts the lab OR doctor routes prescription directly to trigger operational onboarding flow.</p>
             </div>
-            <div class="step">
-              <span class="step__num" aria-hidden="true">3</span>
-              <h3>Review the report</h3>
-              <p>Receive the structured report and review the findings with your patient as part of their care.</p>
+            <div class="flow-step-card" style="background: #ffffff; border-top: 4px solid #1e3a5f; padding: 20px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; border-left: 1px solid #e2e8f0;">
+                <span style="font-size: 1.5rem; font-family: 'Bitter', serif; font-weight: 700; color: #1e3a5f;">03</span>
+                <h4 style="margin: 10px 0 5px 0; color: #0f172a; font-size: 1.1rem;">Home Assessment</h4>
+                <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">Lab schedules home inspection tracking using advanced calibration devices and captures raw samples.</p>
+            </div>
+            <div class="flow-step-card" style="background: #ffffff; border-top: 4px solid #1e3a5f; padding: 20px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; border-left: 1px solid #e2e8f0;">
+                <span style="font-size: 1.5rem; font-family: 'Bitter', serif; font-weight: 700; color: #1e3a5f;">04</span>
+                <h4 style="margin: 10px 0 5px 0; color: #0f172a; font-size: 1.1rem;">Laboratory Analysis</h4>
+                <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">Collected materials run through verified NABL diagnostic channels to secure data parameters safely.</p>
+            </div>
+            <div class="flow-step-card" style="background: #ffffff; border-top: 4px solid #1e3a5f; padding: 20px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; border-left: 1px solid #e2e8f0;">
+                <span style="font-size: 1.5rem; font-family: 'Bitter', serif; font-weight: 700; color: #1e3a5f;">05</span>
+                <h4 style="margin: 10px 0 5px 0; color: #0f172a; font-size: 1.1rem;">Report Sharing</h4>
+                <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">A detailed and structured environmental health portfolio compiles securely for family and referring doctor review.</p>
+            </div>
+            <div class="flow-step-card" style="background: #ffffff; border-top: 4px solid #1e3a5f; padding: 20px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; border-left: 1px solid #e2e8f0;">
+                <span style="font-size: 1.5rem; font-family: 'Bitter', serif; font-weight: 700; color: #1e3a5f;">06</span>
+                <h4 style="margin: 10px 0 5px 0; color: #0f172a; font-size: 1.1rem;">Remediation Consulting</h4>
+                <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">Lab field consultants offer clear, actionable mitigation steps to control allergens and toxic load zones.</p>
+            </div>
+            <div class="flow-step-card" style="background: #ffffff; border-top: 4px solid #1e3a5f; padding: 20px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; border-left: 1px solid #e2e8f0;">
+                <span style="font-size: 1.5rem; font-family: 'Bitter', serif; font-weight: 700; color: #1e3a5f;">07</span>
+                <h4 style="margin: 10px 0 5px 0; color: #0f172a; font-size: 1.1rem;">Doctor Review</h4>
+                <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">Physician analyzes the environmental asset map patterns next to external clinical signs and symptoms.</p>
+            </div>
+            <div class="flow-step-card" style="background: #ffffff; border-top: 4px solid #1e3a5f; padding: 20px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; border-left: 1px solid #e2e8f0;">
+                <span style="font-size: 1.5rem; font-family: 'Bitter', serif; font-weight: 700; color: #1e3a5f;">08</span>
+                <h4 style="margin: 10px 0 5px 0; color: #0f172a; font-size: 1.1rem;">Clinical Follow-Up</h4>
+                <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">Clinical advice, treatment calibrations, and patient lifestyle changes align for better baseline survival health.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- What the report includes -->
-      <section class="section" aria-labelledby="report-heading">
-        <div class="container">
-          <div class="section-head center">
-            <span class="eyebrow">The Report</span>
-            <h2 id="report-heading">What the doctor-friendly report includes</h2>
-          </div>
-          <div class="grid grid--3">
-            <article class="card">
-              <span class="card__icon icon-badge" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M13 3v5h5"/></svg></span>
-              <h3>Standardized findings</h3>
-              <p>Environmental measurements organized in a consistent, easy-to-scan structure.</p>
-            </article>
-            <article class="card">
-              <span class="card__icon icon-badge" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg></span>
-              <h3>Device &amp; lab measurements</h3>
-              <p>Approved device readings presented alongside laboratory results where applicable.</p>
-            </article>
-            <article class="card">
-              <span class="card__icon icon-badge" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h9"/></svg></span>
-              <h3>Guideline context</h3>
-              <p>Findings reviewed against recognized regulatory guidelines to aid interpretation.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Partner with us (placeholder form) -->
-      <section class="section section--alt" aria-labelledby="partner-heading">
-        <div class="container">
-          <div class="section-head center">
-            <span class="eyebrow">Partner With Us</span>
-            <h2 id="partner-heading">Work with Home Matter Labs</h2>
-            <p class="lead">Interested in referring patients or collaborating? Send us your details and our team will follow up.</p>
-          </div>
-
-          <!-- FORM SUBMIT HANDLER GOES HERE (partner inquiry) — no backend wired yet. See script.js initPartnerForm(). -->
-          <form class="form" id="partnerForm" novalidate style="max-width:760px;margin-inline:auto;">
-            <div class="form__row form__row--2">
-              <div class="field">
-                <label for="partnerName">Full name</label>
-                <input type="text" id="partnerName" name="name" autocomplete="name" required />
-              </div>
-              <div class="field">
-                <label for="partnerClinic">Clinic / hospital</label>
-                <input type="text" id="partnerClinic" name="clinic" autocomplete="organization" />
-              </div>
-            </div>
-            <div class="form__row form__row--2">
-              <div class="field">
-                <label for="partnerEmail">Email</label>
-                <input type="email" id="partnerEmail" name="email" autocomplete="email" required />
-              </div>
-              <div class="field">
-                <label for="partnerPhone">Phone</label>
-                <input type="tel" id="partnerPhone" name="phone" autocomplete="tel" />
-              </div>
-            </div>
-            <div class="field">
-              <label for="partnerMessage">How would you like to collaborate?</label>
-              <textarea id="partnerMessage" name="message"></textarea>
-            </div>
-            <button class="btn btn--primary btn--lg" type="submit">Submit Inquiry</button>
-            <p class="form__status" id="partnerStatus" role="status" aria-live="polite"></p>
-            <p class="form__note">This form is not connected to a backend yet. Submissions are not stored or sent.</p>
-          </form>
+      <!-- 3. ACCREDITATION TRUST BANNER -->
+      <section class="trust-banner" style="background-color: #1e3a5f; color: #ffffff; padding: 30px 0; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; font-size: 0.95rem;">
+            <div>🔬 <strong>Approved NABL Labs:</strong> Reliable. Accurate. Trusted.</div>
+            <div>🎯 <strong>Strong Regulatory Thresholds:</strong> Science-backed health limits.</div>
+            <div>🛡️ <strong>Compliance:</strong> National & International standards alignment.</div>
         </div>
       </section>
     </main>
+
 
     <!-- ===================== SHARED FOOTER ======================== -->
     <footer class="site-footer">
@@ -191,7 +143,9 @@
         <div class="footer__grid">
           <div>
             <span class="footer__brand"><svg class="brand__mark icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5" /><path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9" /></svg>Home Matter Labs</span>
-            <p>JP Nagar, Bengaluru</p>
+            <p class="footer__contact"><strong>Global Headquarters:</strong> JP Nagar, Bengaluru</p>
+            <p class="footer__contact"><strong>New York Office:</strong> WeWork — 1900 Broadway, NY, USA</p>
+            <p class="footer__contact"><strong>Toronto Office:</strong> WeWork — 100 University Ave, ON, Canada</p>
             <p class="footer__contact">WhatsApp: <a href="https://wa.me/919740633719" target="_blank" rel="noopener">+91 9740633719</a></p>
           </div>
           <div>
@@ -225,5 +179,23 @@
     </div>
 
     <script src="script.js"></script>
+     <!-- Smooth Scroll Core Library -->
+<script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+
+<!-- Physics Setup Script -->
+<script>
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>
   </body>
 </html>

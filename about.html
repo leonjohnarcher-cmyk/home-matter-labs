@@ -238,7 +238,9 @@
               <svg class="brand__mark icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5" /><path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9" /></svg>
               Home Matter Labs
             </span>
-            <p>JP Nagar, Bengaluru</p>
+            <p class="footer__contact"><strong>Global Headquarters:</strong> JP Nagar, Bengaluru</p>
+            <p class="footer__contact"><strong>New York Office:</strong> WeWork — 1900 Broadway, NY, USA</p>
+            <p class="footer__contact"><strong>Toronto Office:</strong> WeWork — 100 University Ave, ON, Canada</p>
             <p class="footer__contact">WhatsApp: <a href="https://wa.me/919740633719" target="_blank" rel="noopener">+91 9740633719</a></p>
           </div>
           <div>
@@ -278,5 +280,24 @@
     </div>
 
     <script src="script.js"></script>
+    <!-- Smooth Scroll Core Library -->
+<script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+
+<!-- Physics Setup Script -->
+<script>
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>
+
   </body>
 </html>

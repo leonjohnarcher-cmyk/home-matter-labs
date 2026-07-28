@@ -28,6 +28,32 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <script>
+  // Dynamic Smooth Kinetic Scroll Engine (Inspired by Lenis)
+  const body = document.body;
+  const main = document.getElementById('main');
+  let sx = 0, sy = 0, dx = 0, dy = 0;
+
+  main.style.position = 'fixed';
+  main.style.top = 0; main.style.left = 0;
+  main.style.width = '100%'; main.style.willChange = 'transform';
+
+  function setHeight() { body.style.height = main.clientHeight + 'px'; }
+  window.addEventListener('resize', setHeight);
+  window.addEventListener('load', setHeight);
+
+  window.addEventListener('scroll', () => { sx = window.pageXOffset; sy = window.pageYOffset; });
+
+  function render() {
+    dx += (sx - dx) * 0.08; // Smooth interpolation speed modifier
+    dy += (sy - dy) * 0.08;
+    
+    main.style.transform = `translate3d(-${dx.toFixed(2)}px, -${dy.toFixed(2)}px, 0px)`;
+    requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);
+</script>
+
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -118,25 +144,25 @@
             <span class="icon-badge" aria-hidden="true">
               <svg class="icon" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>
             </span>
-            <span>Doctor Recommended</span>
+            <span>Clinician Prescribed</span>
           </div>
           <div class="trust__item">
             <span class="icon-badge" aria-hidden="true">
               <svg class="icon" viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
             </span>
-            <span>Accurate &amp; Reliable</span>
+            <span>ISO 9001:2015 Certified Lab</span>
           </div>
           <div class="trust__item">
             <span class="icon-badge" aria-hidden="true">
               <svg class="icon" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M13 3v5h5"/><path d="M9 13h6M9 16h4"/></svg>
             </span>
-            <span>Comprehensive Reports</span>
+            <span>NABL Compliant Diagnostics</span>
           </div>
           <div class="trust__item">
             <span class="icon-badge" aria-hidden="true">
               <svg class="icon" viewBox="0 0 24 24"><path d="M4 12l8-7 8 7"/><path d="M6 10v9h12v-9"/><path d="M12 19v-4a2 2 0 0 1 2-2c0 1.5-1 2-2 2"/></svg>
             </span>
-            <span>Healthier Homes</span>
+            <span>NABL Compliant Diagnostics</span>
           </div>
         </div>
       </section>
@@ -227,25 +253,24 @@
         <div class="container">
           <div class="section-head center">
             <span class="eyebrow">How It Works</span>
-            <h2 id="hiw-heading">Three simple steps</h2>
+            <h2 id="hiw-heading">Our simple process</h2>
           </div>
           <div class="steps steps--3">
             <div class="step">
               <span class="step__num" aria-hidden="true">1</span>
-              <h3>Your doctor prescribes the test</h3>
-              <p>Your doctor prescribes the Home Matter Lab Test as part of understanding your health.</p>
+              <h3>Clinical Prescription</h3>
+              <p>Your doctor prescribes the Home Matter Lab Test as a core metric for environmental health.</p>
             </div>
             <div class="step">
               <span class="step__num" aria-hidden="true">2</span>
-              <h3>A detailed report is shared</h3>
-              <p>A detailed report is shared with the doctor and the family.</p>
+              <h3>Advanced Lab Diagnostics</h3>
+              <p>Our certified experts sample your indoor space and process data under strict laboratory parameters.</p>
             </div>
             <div class="step">
               <span class="step__num" aria-hidden="true">3</span>
-              <h3>Recommendations &amp; follow-up</h3>
+              <h3>Comprehensive Reporting</h3>
               <p>
-                Environmental improvement recommendations and follow-up guidance are provided where
-                appropriate.
+                A highly detailed diagnostic report and safety roadmap are shared directly with you and your clinician.
               </p>
             </div>
           </div>
@@ -315,7 +340,10 @@
               </svg>
               Home Matter Labs
             </span>
-            <p>JP Nagar, Bengaluru</p>
+            <p class="footer__contact"><strong>Global Headquarters:</strong> JP Nagar, Bengaluru</p>
+            <p class="footer__contact"><strong>New York Office:</strong> WeWork — 1900 Broadway, NY, USA</p>
+            <p class="footer__contact"><strong>Toronto Office:</strong> WeWork — 100 University Ave, ON, Canada</p>
+
             <p class="footer__contact">
               WhatsApp:
               <a href="https://wa.me/919740633719" target="_blank" rel="noopener">+91 9740633719</a>
@@ -358,5 +386,26 @@
     </div>
 
     <script src="script.js"></script>
+    <!-- Smooth Scroll Core Library -->
+<script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+
+<!-- Physics Setup Script -->
+<script>
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>
+
+
+
   </body>
 </html>
